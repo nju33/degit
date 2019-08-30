@@ -29,4 +29,4 @@ fi
 set -xe
 
 replace "$1"
-# post_process
+post_process

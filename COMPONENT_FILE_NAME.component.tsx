@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Props} from './COMPONENT_NAME.interfaces';
-import * as selectors from './COMPONENT_NAME.selectors';
+import {Props} from './COMPONENT_FILE_NAME.interfaces';
+import * as selectors from './COMPONENT_FILE_NAME.selectors';
 
 const COMPONENT_NAMEFC: React.FC<Props> = ({className}) => {
   return <div className={selectors.atomic(className)}>text</div>;

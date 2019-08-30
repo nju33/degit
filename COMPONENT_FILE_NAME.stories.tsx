@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {storiesOf} from '@storybook/react';
-import COMPONENT_NAME from './COMPONENT_NAME.component';
+import COMPONENT_NAME from './COMPONENT_FILE_NAME.component';
 import {normal as normalSP} from './mixins/sp';
 import {normal as normalPC} from './mixins/pc';
 

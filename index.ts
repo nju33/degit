@@ -1,5 +1,5 @@
-import {Props} from './a.interfaces';
-import A from './a.component';
+import {Props} from './COMPONENT_FILE_NAME.interfaces';
+import COMPONENT_NAME from './COMPONENT_FILE_NAME.component';
 
-export {Props, A};
-export default A;
+export {Props, COMPONENT_NAME};
+export default COMPONENT_NAME;

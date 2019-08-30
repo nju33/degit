@@ -6,7 +6,11 @@ My minimal templates by using [Degit](https://github.com/Rich-Harris/degit)
 
 #### dependencies
 
-- `sed` - If gnu-sed, make it available for sed
+- `sed` - If gnu-sed, should make it available as sed
+- `react`
+- `styled-components`
+- `@storybook/react`
+- `@testing-library/react`
 
 ```sh
 # bash, zsh

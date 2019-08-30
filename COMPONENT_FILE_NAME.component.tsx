@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import {Props} from './COMPONENT_FILE_NAME.interfaces';
 import * as selectors from './COMPONENT_FILE_NAME.selectors';
 

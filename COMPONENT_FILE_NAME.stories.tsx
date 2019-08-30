@@ -7,20 +7,23 @@ import {normal as normalPC} from './mixins/pc';
 
 const stories = storiesOf('unknown.unknown', module);
 
-const COMPONENT_NAMEStyled = styled(COMPONENT_NAME)`
-  @media (max-width: 767px) {
-    ${normalSP};
-  }
+export const Normal = (() => {
+  const Styled = styled(COMPONENT_NAME)`
+    @media (max-width: 767px) {
+      ${normalSP};
+    }
 
-  @media (min-width: 768px) {
-    ${normalPC};
-  }
-`;
+    @media (min-width: 768px) {
+      ${normalPC};
+    }
+  `;
 
-export const UseCase = () => {
-  return <COMPONENT_NAMEStyled />;
-};
+  // eslint-disable-next-line react/display-name
+  return () => {
+    return <Styled />;
+  };
+})();
 
 stories.add('normal', () => {
-  return <UseCase />;
+  return <Normal />;
 });

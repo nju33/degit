@@ -1,5 +1,5 @@
 interface Selector {
-  (className: string): string;
+  (className?: string): string;
   (props: {theme: import('styled-components').ThemeProps<unknown>}): string;
 }
 
@@ -7,7 +7,7 @@ interface CreateSelector {
   (selector: string): Selector;
 }
 
-const createSelector: CreateSelector = selector => (arg: unknown) => {
+const createSelector: CreateSelector = selector => (arg: unknown = '') => {
   if (typeof arg === 'object' && arg !== null && 'theme' in arg) {
     return `&.${selector}`;
   }

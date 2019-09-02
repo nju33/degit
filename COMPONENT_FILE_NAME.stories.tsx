@@ -19,9 +19,10 @@ export const Normal = (() => {
   `;
 
   // eslint-disable-next-line react/display-name
-  return () => {
-    return <Styled />;
-  };
+  // eslint-disable-next-line react/display-name
+  return (props => {
+    return <Styled>{props.children}</Styled>;
+  }) as React.FC
 })();
 
 stories.add('normal', () => {

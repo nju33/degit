@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {render} from '@testing-library/react';
 import {Normal} from './COMPONENT_FILE_NAME.stories';
 import 'jest-styled-components';

@@ -19,9 +19,8 @@ export const Normal = (() => {
   `;
 
   // eslint-disable-next-line react/display-name
-  // eslint-disable-next-line react/display-name
-  return (props => {
-    return <Styled>{props.children}</Styled>;
+  return (() => {
+    return <Styled />;
   }) as React.FC
 })();
 

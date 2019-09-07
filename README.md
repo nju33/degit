@@ -18,10 +18,10 @@ My several scaffoldiing by using [Degit](https://github.com/Rich-Harris/degit)
 
 ```sh
 # bash, zsh
-CN=foo-bar npx degit nju33/degit#rac && cd $CN && sh setup.sh $CN
+CN=foo-bar npx degit nju33/degit#rac $CN && cd $CN && sh setup.sh $CN
 
 # fish
-begin; set -lx CN foo-bar; npx degit nju33/degit#rac && cd $CN && sh setup.sh $CN; end
+begin; set -lx CN foo-bar; npx degit nju33/degit#rac $CN && cd $CN && sh setup.sh $CN; end
 ```
 
 ### `#reduck` - Re-Duck
@@ -34,8 +34,8 @@ begin; set -lx CN foo-bar; npx degit nju33/degit#rac && cd $CN && sh setup.sh $C
 
 ```sh
 # bash, zsh
-CN=foo-bar npx degit nju33/degit#reduck && cd $CN && sh setup.sh $CN
+CN=foo-bar npx degit nju33/degit#reduck $CN && cd $CN && sh setup.sh $CN
 
 # fish
-begin; set -lx CN foo-bar; npx degit nju33/degit#reduck && cd $CN && sh setup.sh $CN; end
+begin; set -lx CN foo-bar; npx degit nju33/degit#reduck $CN && cd $CN && sh setup.sh $CN; end
 ```

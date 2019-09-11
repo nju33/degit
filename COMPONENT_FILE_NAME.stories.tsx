@@ -7,14 +7,14 @@ import {normal as normalPC} from './mixins/pc';
 
 const stories = storiesOf('unknown.unknown', module);
 
-export const Normal = (() => {
+export const Default = (() => {
   const Styled = styled(COMPONENT_NAME)`
     @media (max-width: 767px) {
-      ${normalSP};
+      ${normalSP()};
     }
 
     @media (min-width: 768px) {
-      ${normalPC};
+      ${normalPC()};
     }
   `;
 
@@ -24,6 +24,21 @@ export const Normal = (() => {
   }) as React.FC
 })();
 
-stories.add('normal', () => {
-  return <Normal />;
-});
+stories.add(
+  'normal',
+  () =>
+    // eslint-disable-next-line react/display-name
+    (() => {
+      const _result = styled(Default)`
+        @media (max-width: 767px) {
+          ${normalSP()};
+        }
+
+        @media (min-width: 768px) {
+          ${normalPC()};
+        }
+      `;
+
+      return <_result />;
+    }) as React.FC,
+);

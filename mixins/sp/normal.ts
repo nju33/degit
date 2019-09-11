@@ -1,3 +1,3 @@
 import {css} from 'styled-components';
 
-export const normal = css``;
+export const normal = () => css``;

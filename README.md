@@ -13,6 +13,7 @@ My several scaffoldiing by using [Degit](https://github.com/Rich-Harris/degit)
 
 - `react`
 - `styled-components`
+- `@storybook/addon-knobs`
 - `@storybook/react`
 - `@testing-library/react`
 

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {render} from '@testing-library/react';
-import Default from './COMPONENT_FILE_NAME.stories';
+import Default from './COMPONENT_FILE_NAME.component';
 import 'jest-styled-components';
 
 test('snapshot', () => {

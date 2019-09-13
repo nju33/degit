@@ -4,7 +4,7 @@ My several scaffoldiing by using [Degit](https://github.com/Rich-Harris/degit)
 
 ### Common dependency tools
 
-- `sed` - If gnu-sed, should make it available as sed
+- `sed` or `gsed` - If run on Darwin, this make use gsed as sed
 - `node` - NodeJS language
 
 ### `#rac` - React Atomic Component

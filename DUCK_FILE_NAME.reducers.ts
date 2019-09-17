@@ -10,6 +10,7 @@ const somethingReducer = (state: State['something'] = {}, action: Actions) => {
   switch (action.type) {
     case types.DUCK_NAME_IN_CONSTANT_INITIALIZE: {
       state[action.payload.id] = action.payload.values;
+      return state;
     }
     default: {
       return state;

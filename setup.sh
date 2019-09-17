@@ -1,7 +1,7 @@
 #!/bin/sh
 
 replace () {
-  for f in *.tsx *.ts
+  for f in *.ts
   do
     file_name=$1
     file_name_in_lower_camel_case="$(F="$file_name" node -p "process.env.F.replace(/-([a-z])/g, (_, p) => p.toUpperCase())")"

@@ -40,3 +40,19 @@ CN=foo-bar npx degit nju33/degit#reduck $CN && cd $CN && sh setup.sh $CN
 # fish
 begin; set -lx CN foo-bar; npx degit nju33/degit#reduck $CN && cd $CN && sh setup.sh $CN; end
 ```
+
+### `#reduck-hook` - Re-Duck (β)
+
+#### npm dependencies
+
+- `redux`
+- `immer`
+- `reselect`
+
+```sh
+# bash, zsh
+CN=foo-bar npx degit nju33/degit#reduck-hook $CN && cd $CN && sh setup.sh $CN
+
+# fish
+begin; set -lx CN foo-bar; npx degit nju33/degit#reduck-hook $CN && cd $CN && sh setup.sh $CN; end
+```

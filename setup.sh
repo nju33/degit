@@ -7,11 +7,11 @@ replace () {
     file_name_in_lower_camel_case="$(F="$file_name" node -p "process.env.F.replace(/-([a-z])/g, (_, p) => p.toUpperCase())")"
 
     if command -v gsed; then
-      gsed -i "s/DUCK_NAME/$file_name_in_lower_camel_case/g" "$f"
       gsed -i "s/DUCK_FILE_NAME/$file_name/g" "$f"
+      gsed -i "s/DUCK_NAME/$file_name_in_lower_camel_case/g" "$f"
     else
-      sed -i "s/DUCK_NAME/$file_name_in_lower_camel_case/g" "$f"
       sed -i "s/DUCK_FILE_NAME/$file_name/g" "$f"
+      sed -i "s/DUCK_NAME/$file_name_in_lower_camel_case/g" "$f"
     fi
 
     if [ "$f" != "index.ts" ]; then

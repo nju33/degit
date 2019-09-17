@@ -1,6 +1,6 @@
 import * as actions from './DUCK_FILE_NAME.actions';
 
-export const initialize = ({
+export const initializeOperator = ({
   dispatch
 }: {
   dispatch: import('redux').Dispatch;

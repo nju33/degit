@@ -1,6 +1,6 @@
 interface Selector {
-  (className?: string): string;
-  (props: {theme: import('styled-components').ThemeProps<unknown>}): string;
+  <T extends string>(className: import('react').HTMLAttributes<unknown>['className']): T;
+  <T extends string>(props: {theme: import('styled-components').ThemeProps<unknown>}): T;
 }
 
 interface CreateSelector {

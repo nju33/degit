@@ -1,29 +1,23 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import {withKnobs} from '@storybook/addon-knobs';
 import {storiesOf} from '@storybook/react';
-import COMPONENT_NAME from './COMPONENT_FILE_NAME.component';
-import {normal as normalSP} from './mixins/sp';
-import {normal as normalPC} from './mixins/pc';
+import {COMPONENT_NAME} from './COMPONENT_FILE_NAME.components';
+import * as mixins from './mixins';
 
-const stories = storiesOf('unknown.unknown', module);
+const stories = storiesOf('unknown', module);
 
-export const Normal = (() => {
-  const Styled = styled(COMPONENT_NAME)`
-    @media (max-width: 767px) {
-      ${normalSP};
-    }
+stories.addDecorator(withKnobs);
 
-    @media (min-width: 768px) {
-      ${normalPC};
-    }
+const _COMPONENT_NAME: React.FC = () => {
+  const _result = styled(COMPONENT_NAME)`
+    ${mixins.general()};
   `;
 
-  // eslint-disable-next-line react/display-name
-  return (() => {
-    return <Styled />;
-  }) as React.FC
-})();
+  return <_result />;
+}
 
-stories.add('normal', () => {
-  return <Normal />;
-});
+stories.add(
+  '_COMPONENT_NAME',
+  () => <_COMPONENT_NAME />
+);

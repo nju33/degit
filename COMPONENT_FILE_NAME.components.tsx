@@ -15,4 +15,4 @@ const COMPONENT_NAME = React.memo(COMPONENT_NAMEFC);
 
 COMPONENT_NAME.displayName = 'COMPONENT_NAME';
 
-export default COMPONENT_NAME;
+export {COMPONENT_NAME};

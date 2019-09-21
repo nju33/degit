@@ -1,10 +1,10 @@
 import * as React from 'react';
 import {render} from '@testing-library/react';
-import {Normal} from './COMPONENT_FILE_NAME.stories';
+import Default from './COMPONENT_FILE_NAME.component';
 import 'jest-styled-components';
 
 test('snapshot', () => {
-  const {container} = render(<Normal />);
+  const {container} = render(<Default />);
 
   expect(container.firstChild).toMatchSnapshot();
 });

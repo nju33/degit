@@ -10,11 +10,13 @@ const stories = storiesOf('unknown', module);
 stories.addDecorator(knobs.withKnobs);
 
 stories.add('COMPONENT_VAR_NAME', () => {
-  const COMPONENT_NAME: React.FC = () => {
-    return styled(COMPONENT_VAR_NAME)`
-      ${mixins.general()};
-    `;
+  const StyledCOMPONENT_NAME = styled(COMPONENT_VAR_NAME)`
+    ${mixins.general()};
+  `;
+
+  const COMPONENT_NAMEStory: React.FC = () => {
+    return <StyledCOMPONENT_NAME />;
   };
 
-  return <COMPONENT_NAME />;
+  return <COMPONENT_NAMEStory />;
 });

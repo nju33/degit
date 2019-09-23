@@ -7,7 +7,6 @@ interface Selector {
   }): T;
 }
 
-
 interface CreateSelector {
   (selector: string): Selector;
 }

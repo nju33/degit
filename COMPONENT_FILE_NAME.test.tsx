@@ -1,10 +1,16 @@
 import * as React from 'react';
-import {render} from '@testing-library/react';
-import Default from './COMPONENT_FILE_NAME.component';
+import {RenderResult, render} from '@testing-library/react';
+import {COMPONENT_VAR_NAME as COMPONENT_NAME} from './COMPONENT_FILE_NAME.components';
 import 'jest-styled-components';
 
-test('snapshot', () => {
-  const {container} = render(<Default />);
+describe('COMPONENT_VAR_NAME', () => {
+  let renderResult: RenderResult;
+  
+  beforeEach(() => {
+    renderResult = render(<COMPONENT_NAME />);
+  });
 
-  expect(container.firstChild).toMatchSnapshot();
+  test('snapshot', () => {
+    expect(renderResult.container.firstChild).toMatchSnapshot();
+  });
 });

@@ -5,7 +5,7 @@ import 'jest-styled-components';
 
 describe('COMPONENT_VAR_NAME', () => {
   let renderResult: RenderResult;
-  
+
   beforeEach(() => {
     renderResult = render(<COMPONENT_NAME />);
   });

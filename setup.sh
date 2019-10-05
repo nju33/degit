@@ -19,9 +19,11 @@ replace () {
       sed -i "s/COMPONENT_NAME/$file_name_in_pascal_case/g" "$f"
     fi
 
-    if [ "$f" != "index.ts" ]; then
-      mv "$f" "$(echo "$f" | sed "s/COMPONENT_FILE_NAME/$file_name/")"
-    fi
+    # mv: 'before-file.name' and 'after-file.name' are the same file
+    # ↑エラーが起こる可能性があるが、特に影響はないので容認する&エラー出力も捨てる
+    set +e
+    mv "$f" "$(echo "$f" | sed "s/COMPONENT_FILE_NAME/$file_name/")" 2> /dev/null
+    set -e
   done
 }
 

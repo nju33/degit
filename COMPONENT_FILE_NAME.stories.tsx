@@ -5,11 +5,11 @@ import * as knobs from '@storybook/addon-knobs';
 import {COMPONENT_VAR_NAME} from './COMPONENT_FILE_NAME.components';
 import * as mixins from './mixins';
 
-const stories = storiesOf('unknown', module);
+const stories = storiesOf('COMPONENT_FILE_NAME', module);
 
 stories.addDecorator(knobs.withKnobs);
 
-stories.add('COMPONENT_VAR_NAME', () => {
+stories.add('general', () => {
   const StyledCOMPONENT_NAME = styled(COMPONENT_VAR_NAME)`
     ${mixins.general()};
   `;
